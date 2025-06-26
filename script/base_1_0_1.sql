@@ -67,15 +67,15 @@ CREATE TABLE Employe (
   CONSTRAINT unique_nom_employe UNIQUE (nom)
 );
 -- Table pour l'authentification des utilisateurs
-CREATE TABLE User (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_employe INT NOT NULL UNIQUE,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    pswd VARCHAR(255) NOT NULL,
-    is_active BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY (id_employe) REFERENCES Employe(id),
-    CONSTRAINT check_username_length CHECK (LENGTH(username) >= 3)
-);
+-- CREATE TABLE User (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     id_employe INT NOT NULL UNIQUE,
+--     username VARCHAR(50) NOT NULL UNIQUE,
+--     pswd VARCHAR(255) NOT NULL,
+--     is_active BOOLEAN DEFAULT TRUE,
+--     FOREIGN KEY (id_employe) REFERENCES Employe(id),
+--     CONSTRAINT check_username_length CHECK (LENGTH(username) >= 3)
+-- );
 -- Détails des mouvements de stock des matières premières
 CREATE TABLE Detail_Mouvement_Stock_Matiere_Premiere (
   id INT AUTO_INCREMENT PRIMARY KEY,
